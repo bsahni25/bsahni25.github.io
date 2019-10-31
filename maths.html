@@ -1,5 +1,32 @@
 <html>
 <head>
+  <script language="javascript">
+    function proces(){
+     var table=document.getElementById("datatable");
+      
+      var rowCount=document.getElementById("number").value;
+			
+      var  tr, td, row, cell;
+for (row = 0; row < rowCount; row++) {
+    tr = document.createElement('tr');
+   
+       var td1 = document.createElement('td');
+        tr.appendChild(td1);
+        td1.innerHTML = "1";
+  var td2 = document.createElement('td');
+        tr.appendChild(td2);
+        td2.innerHTML = "2";
+  var td3 = document.createElement('td');
+        tr.appendChild(td3);
+        td3.innerHTML = "3";
+  var td4 = document.createElement('td');
+        tr.appendChild(td4);
+        td4.innerHTML = "4";
+    
+    table.appendChild(tr);
+}
+    }
+  </script>
 <title>Mathematics</title>
 </head>
 <body width="90%" style="background-color:#5D6D7E; color:#F1C40F; ">
