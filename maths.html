@@ -7,25 +7,11 @@
       var rowCount=document.getElementById("number").value;
 			
       var table = document.createElement('table'), tr, td, row, cell;
+	    var rw='';
 for (row = 0; row < rowCount; row++) {
-    tr = document.createElement('tr');
-   
-       var td1 = document.createElement('td');
-        tr.appendChild(td1);
-        td1.innerHTML = "1";
-  var td2 = document.createElement('td');
-        tr.appendChild(td2);
-        td2.innerHTML = "2";
-  var td3 = document.createElement('td');
-        tr.appendChild(td3);
-        td3.innerHTML = "3";
-  var td4 = document.createElement('td');
-        tr.appendChild(td4);
-        td4.innerHTML = "4";
-    
-    table.appendChild(tr);
+   rw=rw+"<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>";
 }
-	   document.getElementById('container').appendChild(table); 
+	   document.getElementById('datatable').innerHTML=rw; 
     }
   </script>
 <title>Mathematics</title>
@@ -34,7 +20,8 @@ for (row = 0; row < rowCount; row++) {
 <input type="text" id="number" placeholder="Enter number of classes" align="center"><br>
   <input type="button" value="Submit" onclick="process()" align="center">
   <div id="container" align="center">
-         
+         <table id="datatable">
+	  </table>
 	</div>
 </body>
 </html>
