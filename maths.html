@@ -1,24 +1,19 @@
 <html>
 <head>
-  <script language="javascript">
-    function proces(){
-   
-      
-      var rowCount=document.getElementById("number").value;
-			
-      var table = document.createElement('table'), tr, td, row, cell;
-	    var rw='';
-for (row = 0; row < rowCount; row++) {
-   rw=rw+"<tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>";
-}
-	   document.getElementById('datatable').innerHTML=rw; 
-    }
-  </script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".add-row").click(function(){
+            v
+            var markup = "<tr><td><input type='text' name='record'></td><td></td><td></td></tr>";
+            $("table tbody").append(markup);
+        });
+	</script>
 <title>Mathematics</title>
 </head>
 <body width="90%" style="background-color:#5D6D7E; color:#F1C40F; ">
 <input type="text" id="number" placeholder="Enter number of classes" align="center"><br>
-  <input type="button" value="Submit" onclick="process()" align="center">
+  <input type="button" value="Submit" class="add-row" align="center">
   <div id="container" align="center">
          <table id="datatable">
 	  </table>
