@@ -2,11 +2,11 @@
 <head>
   <script language="javascript">
     function proces(){
-     var table=document.getElementById("datatable");
+   
       
       var rowCount=document.getElementById("number").value;
 			
-      var  tr, td, row, cell;
+      var table = document.createElement('table'), tr, td, row, cell;
 for (row = 0; row < rowCount; row++) {
     tr = document.createElement('tr');
    
@@ -25,6 +25,7 @@ for (row = 0; row < rowCount; row++) {
     
     table.appendChild(tr);
 }
+	   document.getElementById('container').appendChild(table); 
     }
   </script>
 <title>Mathematics</title>
@@ -32,10 +33,8 @@ for (row = 0; row < rowCount; row++) {
 <body width="90%" style="background-color:#5D6D7E; color:#F1C40F; ">
 <input type="text" id="number" placeholder="Enter number of classes" align="center"><br>
   <input type="button" value="Submit" onclick="process()" align="center">
-  <div id="display" align="center">
-    <table id="datatable" width="80%" align="center" border="1" cellspacing="0" cellpadding="0">
-      <caption>Data Table</caption>
-      <tr><td align="center">Class</td><td align="center">Frequency</td><td align="center">Class Mark</td><td align="center">&#931 f<sub>i</sub>x<sub>i</sub></td><tr>
-    </table>      
+  <div id="container" align="center">
+         
+	</div>
 </body>
 </html>
