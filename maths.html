@@ -5,22 +5,12 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url("peepal2.jpg");
-  background-repeat: repeat;
+  background-color:#808B96 ;
   font-family: sans-serif;
    color: red;
    font-size: 2em;
 }
-  iframe{
-   
-   
-    align:center;
-    display: block;       /* iframes are inline by default */
-    
-    border: none;         /* Reset default border */
-    height: 100vh;        /* Viewport-relative units */
-    width: 100vh;
-  }
+  
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -70,14 +60,13 @@ background-color: #0af;
             
            var row=$("#number").val();
 		$("body").empty();
-            var markup = "<table width='80%' border='1' cellspacing='0' cellpadding='0'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
+            var markup = "<table width='80%' border='1' cellspacing='0' cellpadding='0' align='center'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
             for(var i=0;i<row;i++){
 	        markup=markup+"<tr><td><input type='text'></td><td><input type='text'></td><td></td><td></td></tr>";
 	    }
-		markup=markup+"</table>";
+		markup=markup+"</table><br><br><button id='calculate' align='center' onclick='Calculate()'>Calculate</button>";
 		$("body").append(markup);
-      
-    }
+          }
 	</script>
 <title>Mathematics</title>
 </head>
