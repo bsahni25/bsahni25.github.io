@@ -67,11 +67,15 @@ background-color: #0af;
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
 	function appendtext(){  
-       
+            
            var row=$("#number").val();
-		alert(row):
-            var markup = "<table><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
-            $("body").append(markup);
+		$("body").empty();
+            var markup = "<table width='80%' border='1' cellspacing='0' cellpadding='0'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
+            for(var i=0;i<row;i++){
+	        markup=markup+"<tr><td><input type='text'></td><td><input type='text'></td><td></td><td></td>";
+	    }
+		markup=markup+"</table>";
+		$("body").append(markup);
       
     }
 	</script>
