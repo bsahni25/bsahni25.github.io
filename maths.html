@@ -62,7 +62,7 @@ background-color: #0af;
 		
             var markup = "<table width='80%' border='1' cellspacing='0' cellpadding='0' align='center'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
             for(var i=0;i<row;i++){
-	        markup=markup+"<tr><td><input type='text' name='c'+i placeholder='example: 0-10'></td><td><input type='text' name='f'+i></td><td></td><td></td></tr>";
+	        markup=markup+"<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td></td><td></td></tr>";
 	    }
 		markup=markup+"</table><br><br><button id='calculate' align='center' onclick='Calculate()'>Calculate</button>";
 		$("body").append(markup);
@@ -72,7 +72,7 @@ background-color: #0af;
 		
             var ma= "<table width='80%' border='1' cellspacing='0' cellpadding='0' align='center'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
             for(var i=0;i<row;i++){
-	        ma=ma+"<tr><td>"+$('c'+i).val()+"</td><td>"+$('f'+i).val()+"</td><td></td><td></td></tr>";
+	        ma=ma+"<tr><td>"+c[i]+"</td><td>"+f[i]+"</td><td></td><td></td></tr>";
 	    }
 		ma=ma+"</table>";
 		$("body").append(ma);
