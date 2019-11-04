@@ -61,15 +61,15 @@ background-color: #0af;
   }
 }
 </style>
-</head>
+
 
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
-	function appendtext(){
-    
+	function appendtext(){  
        
            var row=$("#number").val();
+		alert(row):
             var markup = "<table><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
             $("body").append(markup);
       
@@ -89,7 +89,7 @@ background-color: #0af;
 <input type="text" id="number" placeholder="Enter number of classes" align="center"><br>
   <input type="button" value="Submit" onclick="appendtext()" align="center">
   <br>
-	<.br>
+	
 		
 </body>
 </html>
