@@ -60,9 +60,9 @@ background-color: #0af;
             
            var row=$("#number").val();
 		
-            var markup = "<table width='80%' border='1' cellspacing='0' cellpadding='0' align='center'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>";
+            var markup = "";
             for(var i=0;i<row;i++){
-	        markup=markup+"<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td></td><td></td></tr>";
+	        markup=markup+"";
 	    }
 		markup=markup+"</table><br><br><button id='calculate' align='center' onclick='Calculate()'>Calculate</button>";
 		$("body").append(markup);
@@ -90,10 +90,26 @@ background-color: #0af;
   <a href="about.html" target="_self">About</a>
   </div>
 	<br><br>
-  <input type="text" id="number" placeholder="Enter number of classes" align="center"><br>
-  <input type="button" value="Submit" onclick="appendtext()" align="center">
-  <br>
-	
+  
+	<table width='80%' border='1' cellspacing='0' cellpadding='0' align='center'><tr><td>CLass</td><td>Frequency</td><td>Class Mark</td><td>&#931f<sub>i</sub>x<sub>i</sub></tr>
+	<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+        <tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+	<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+		<tr><td><input type='text' name='c[]' placeholder='example: 0-10'></td><td><input type='text' name='f[]'></td><td><input type='text' name='cm[]'></td><td><input type='text' name='fx[]'></td></tr>	
+	</table>
+	<button onclick="Calculate()">Calculate</button>
 		
 </body>
 </html>
