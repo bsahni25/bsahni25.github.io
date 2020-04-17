@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Get value on button click and show alert
+    $("#calc").click(function(){
+        var a = $("#num1").val();
+         var b = $("#den1").val();
+          var c = $("#num2").val();
+           var d = $("#den2").val();
+            var i = $("#numbers").val();
+      p=parseInt(a); q=parseInt(b); r=parseInt(c); s=parseInt(d); j=parseInt(i); 
+      var num=q*r-p*s; var den=q*s*(j+1);
+      $("#result").append("</br>x="+a+"/"+b);
+      $("#result").append("<br>y="+c+"/"+d);
+      $("#result").append("<br>Number of rational numbers to be inserted="+i);
+      $("#result").append("<br>d=(y - x)/(n + 1)="+num+"/"+den);
+      for(k=1;k<=j;k++){
+        var nm=den*p+k*q*num; var dm=q*den;
+        $("#result").append("<br>A<sub>"+k+"</sub>=("+p+"/"+q+")+"+k+"x("+num+"/"+den+")="+nm+"/"+dm);
+      }
+    });
+});
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+  div{
+    font-size:16px;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+
+.x {
+width: auto;
+height: auto;
+background-color: #fa0;
+transition: 1000ms linear;
+}
+.x:hover {
+background-color: #0af;
+}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active" >Home</a>
+  <a href="mathshome.html" target="_self">Mathematics</a>
+  <a href="physics.html" target="_self">Physics</a>
+  <a href="about.html" target="_self">About</a>
+  </div>
+<a href="index.html">Home</a>>><a href="mathshome.html">Mathematics</a>>><a href="ixmathshome.html">IX Maths</a>
+<br>
+<h2 align="center">Number System</h2><hr width="100%">
+<div id="textbd" >
+<ul><li><b>Topics</b></li>
+<li><a href="#basicdefinitions">Basic definitions</a></li>
+<li><a href="#insert">Inserting rational numbers between two give rational numbers</a></li>
+<li><a href="#insert_ecalculator">Insert rational numbers using e-calculator</a></li>
+ </ul><hr width="100%">
+ 
+ <p id="basicdefinitions"><h2>Basic Definitions</h2>
+ <pre>
+<b><u>Natural Number:</u></b>All the counting numbers are called namtural numbers.The collection or set of natural numbers is denoted by N.
+              In other words we can say that natural numbers starts from 1 and continues up to infinty.  N={1,2,3,4,5,.........}
+<b><u>Whole Number:</u></b>Collection of natural numbers together with 0 is called whole number. The collection or set of whole numbers is denoted by W.
+              W={0,1,2,3,4,5,..................}
+<b><u>Integers:</u></b>Natural numbers togetherwith  zero and negative of natural numbers forms the set of Integers. The set of Integers
+              is denoted by Z. Z={...........,-4,-3,-2,-1,0,1,2,3,4,...........}. The set of all positive inegers is denoted by Z<sup>+</sup> and that of negative
+              Integers is denoted by Z<sup>-</sup>
+<b><u>Rational Numbers:</u></b>The Numbers which can be written in the form of p/q, where q&#8800 0. The set of rational numbers is denoted by Q.
+<b><u>Irrational Numbers:</u></b>The numbers which can not be writtenin the form of p/q are called Irrational numbers. The set of irrational numbers is
+              generally denoted by P or R/Q. eg: &#960,&#8730 2,&#8731 4 etc.
+<b><u>Real Numbers:</u></b>Rational numbers and irrational numbers together forms the set of Real numbers. The set of real numbers is denoted by R.
+</pre>
+ </p>
+ <p id="insert"><h2> Inserting rational numbers between two given rational numbers</h2>
+ Let there are two rational numbers x and y. x &#60 y. To find n rational numbers between x and y.<br>
+  <b>Method1:</b><br> <img src="z.png">, Now we have three rational numbers x,c1,y. Repeat the same method for x and c1 or 
+  c1 and y to find next rational number.<br>
+  <b>Method2:</b><br>
+  First of all calculate d using the formula <img src="d.png">. Then the n rational numbers are given by A<sub>1</sub>=x + d, A<sub>2</sub>=x + 2d..........., A<sub>n</sub>=x + nd.<br>
+  Examples are illustrated in video.
+ </p>
+ <iframe width="640" height="360"
+src="https://www.youtube.com/embed/dwYmchA8Ad8" align="center">
+</iframe>
+ <p id="insert_ecalculator"><h3>Insert Rational numbers using e-calculator</h3>
+ <table align="center" border="1"><tr><th>First Rational Number</th><th>Second Rational Number</th></tr>
+ <tr><td>Numerator<input type="text"  id="num1" ></td><td>Numerator<input type="text"  id="num2"></td></tr>
+ <tr><td>Denominator<input type="text"  id="den1"></td><td>Denominator<input type="text"  id="den2"></td></tr>
+ <tr><td>No. of rational Numbers:<input type="text" id="numbers"></td><td align="center"><button id="calc">Calculate</button></td></tr>
+  </table>
+  <p id="result"></p>
+ </div>
+  </body>
+</html>
