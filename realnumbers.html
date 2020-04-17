@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Get value on button click and show alert
+    $("#btn").click(function(){
+        var p= $("#num1").val();
+         var q1 = $("#num2").val();
+         var a=parseInt(p); var b=parseInt(q1);
+         var q=parseInt(b/a);
+         var r=b-a*q;
+         
+         $("#result").append("<br>a="+a+",b="+b);
+         $("#result").append("<br>Applying Euclid's Lemma on a and b we have,");
+         $("#result").append("<br>"+b+"="+a+"x"+q+"+"+r);
+         while(r!=0){
+            b=a; a=r; q=parseInt(b/a); r=b-a*q;
+            $("#result").append("<br>Since remainder in not equal to zero. Again applying Euclid's Lemma on a and b we have,");
+             $("#result").append("<br>a="+a+",b="+b);
+             $("#result").append("<br>"+b+"="+a+"x"+q+"+"+r);
+         }
+     $("#result").append("<br> In the last step remainder is zero. Therefor HCF="+a);
+
+        
+    });
+});
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    input[type="text"] {
+
+  background-color : #d1d1d1; 
+
+}
+#result{
+    font-size: 20px;
+    color: red;
+}
+
+  div{
+    font-size:16px;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+
+.x {
+width: auto;
+height: auto;
+background-color: #fa0;
+transition: 1000ms linear;
+}
+.x:hover {
+background-color: #0af;
+}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body  style="background-color:powderblue;">
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active" >Home</a>
+  <a href="mathshome.html" target="_self">Mathematics</a>
+  <a href="physics.html" target="_self">Physics</a>
+  <a href="about.html" target="_self">About</a>
+  </div>
+
+  <!--Heading section-->
+<a href="index.html">Home</a>>><a href="mathshome.html">Mathematics</a>>><a href="xmathshome.html">X Maths</a>
+<br>
+<h2 align="center">Chapter-1[Real Number]</h2><hr width="100%">
+<div id="textbd" >
+<ul><li><b>Topics</b></li>
+<li><a href="#euclidlemma">Euclid's Lemma</a></li>
+<li><a href="#algorithm">Euclid Algorithm to find HCF</a></li>
+<li><a href="#hcf_ecalculator">Calculate HCF</a></li>
+<li><a href="#abform">Express HCF in the dorm of am+bn</a></li>
+ </ul><hr width="100%">
+ <!--Heading Ends-->
+ <b><h2 id="euclidlemma">Euclid's Lemma</h2></b>
+    For any two positive integers "a" and "b", there exists two unique integers q and r such that a=bq+r. Where 0&#8804 r &#60 b
+<b><h2 id="euclidalgorithm">Euclid's Algorithm</h2></b>An algorithm is a step by step statement to solve any problem. Eclid's algorith is used
+ to find HCF(Highest Common factor) or gcd(greatest common divisor)of two numbers. It is based on Euclid's Lemma.
+<br><b>Question:</b> Find the HCF of 135 and 225 using Euclid's Algorith. Watch video for solution.<br>
+<div align="center"><iframe width="360" height="240"
+src="https://www.youtube.com/embed/S_USn4d8wrs" align="middle" frameborder="0" allowfullscreen>
+</iframe></div>
+<b><h2 id="hcf_ecalculator">HCF Calculator</h2></b>
+<ul><li>For two numbers a and b(in ascending order), enter a as smaller number and b as larger number.</li>
+<li>For three numbers a,b,c(in ascending order),first calculate the hcf of a and b. Then take hcf as smaller number and c 
+as larger number and enter in the first and second text box.</li></ul><br>
+<input type="text"  placeholder="Enter smaller number" id="num1">
+<input type="text"  placeholder="Enter larger number" id="num2"><input type="button"  value="Calculate HCF" id="btn">
+<p id="result"></p>
+<p id="abform">
+<br><b><u><h2>Express HCF of a and b in the form of am+bn</h2></u></b>
+<div align="center"><iframe width="360" height="240"
+src="https://www.youtube.com/embed/GMpNhvdqqkE" align="middle" frameborder="0" allowfullscreen>
+</iframe></div>
+</p>
+  </body>
+</html>
