@@ -6,25 +6,22 @@
 <script>
 $(document).ready(function(){
     // Get value on button click and show alert
-    $("#btn").click(function(){
-        var p= $("#num1").val();
-         var q1 = $("#num2").val();
-         var a=parseInt(p); var b=parseInt(q1);
-         var q=parseInt(b/a);
-         var r=b-a*q;
-         
-         $("#result").append("<br>a="+a+",b="+b);
-         $("#result").append("<br>Applying Euclid's Lemma on a and b we have,");
-         $("#result").append("<br>"+b+"="+a+"x"+q+"+"+r);
-         while(r!=0){
-            b=a; a=r; q=parseInt(b/a); r=b-a*q;
-            $("#result").append("<br>Since remainder in not equal to zero. Again applying Euclid's Lemma on a and b we have,");
-             $("#result").append("<br>a="+a+",b="+b);
-             $("#result").append("<br>"+b+"="+a+"x"+q+"+"+r);
-         }
-     $("#result").append("<br> In the last step remainder is zero. Therefor HCF="+a);
-
-        
+    $("#calc").click(function(){
+        var a = $("#num1").val();
+         var b = $("#den1").val();
+          var c = $("#num2").val();
+           var d = $("#den2").val();
+            var i = $("#numbers").val();
+      p=parseInt(a); q=parseInt(b); r=parseInt(c); s=parseInt(d); j=parseInt(i); 
+      var num=q*r-p*s; var den=q*s*(j+1);
+      $("#result").append("</br>x="+a+"/"+b);
+      $("#result").append("<br>y="+c+"/"+d);
+      $("#result").append("<br>Number of rational numbers to be inserted="+i);
+      $("#result").append("<br>d=(y - x)/(n + 1)="+num+"/"+den);
+      for(k=1;k<=j;k++){
+        var nm=den*p+k*q*num; var dm=q*den;
+        $("#result").append("<br>A<sub>"+k+"</sub>=("+p+"/"+q+")+"+k+"x("+num+"/"+den+")="+nm+"/"+dm);
+      }
     });
 });
 </script>
@@ -34,10 +31,6 @@ $(document).ready(function(){
 
   background-color : #d1d1d1; 
 
-}
-#result{
-    font-size: 20px;
-    color: red;
 }
 
   div{
@@ -100,21 +93,19 @@ background-color: #0af;
   <a href="physics.html" target="_self">Physics</a>
   <a href="about.html" target="_self">About</a>
   </div>
-
-  <!--Heading section-->
-<a href="index.html">Home</a>>><a href="mathshome.html">Mathematics</a>>><a href="xmathshome.html">X Maths</a>
+<a href="index.html">Home</a>>><a href="mathshome.html">Mathematics</a>>><a href="ixmathshome.html">IX Maths</a>
 <br>
-<h2 align="center">Chapter-1[Real Number]</h2><hr width="100%">
+<h2 align="center">Number System</h2><hr width="100%">
 <div id="textbd" >
 <ul><li><b>Topics</b></li>
-<li><a href="#euclidlemma">Euclid's Lemma</a></li>
-<li><a href="#algorithm">Euclid Algorithm to find HCF</a></li>
-<li><a href="#hcf_ecalculator">Calculate HCF</a></li>
-<li><a href="#abform">Express HCF in the form of am+bn</a></li>
+<li><a href="#basicdefinitions">Basic definitions</a></li>
+<li><a href="#insert">Inserting rational numbers between two give rational numbers</a></li>
+<li><a href="#insert_ecalculator">Insert rational numbers using e-calculator</a></li>
+    <li><a href="#decimals">Decimals</a></li>
  </ul><hr width="100%">
- <!--Heading Ends-->
-    <p id="basic"><h2>Basic Definitions</h2>
-    <ul>
+ 
+ <p id="basicdefinitions"><h2>Basic Definitions</h2>
+ <ul>
 <li><b><u>Natural Number:</u></b>All the counting numbers are called namtural numbers.The collection or set of natural numbers is denoted by N.
               In other words we can say that natural numbers starts from 1 and continues up to infinty.  N={1,2,3,4,5,.........}</li>
 <li><b><u>Whole Number:</u></b>Collection of natural numbers together with 0 is called whole number. The collection or set of whole numbers is denoted by W.
@@ -128,27 +119,55 @@ background-color: #0af;
 <li><b><u>Real Numbers:</u></b>Rational numbers and irrational numbers together forms the set of Real numbers. The set of real numbers is denoted by R.
      </li>
     </ul>
+ </p>
+ <p id="insert"><h2> Inserting rational numbers between two given rational numbers</h2>
+ Let there are two rational numbers x and y. x &#60 y. To find n rational numbers between x and y.<br>
+  <b>Method1:</b><br> <img src="z.png">, Now we have three rational numbers x,c1,y. Repeat the same method for x and c1 or 
+  c1 and y to find next rational number.<br>
+  <b>Method2:</b><br>
+  First of all calculate d using the formula <img src="d.png">. Then the n rational numbers are given by A<sub>1</sub>=x + d, A<sub>2</sub>=x + 2d..........., A<sub>n</sub>=x + nd.<br>
+  Examples are illustrated in video.
+ </p>
+ <div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/dwYmchA8Ad8" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://youtu.be/dwYmchA8Ad8">Watch on Youtube</a> </div>
+ <p id="insert_ecalculator"><h3>Insert Rational numbers using e-calculator</h3>
+ <table align="center" border="1"><tr><th colspan="2">First Rational Number</th><th colspan="2">Second Rational Number</th></tr>
+     <tr><td>Numerator</td><td><input type="text"  id="num1" ></td><td>Numerator</td><td><input type="text"  id="num2"></td></tr>
+     <tr><td>Denominator</td><td><input type="text"  id="den1"></td><td>Denominator</td><td><input type="text"  id="den2"></td></tr>
+ <tr><td>No. of rational Numbers:</td><td><input type="text" id="numbers"></td><td align="center" colspan="2"><button id="calc">Calculate</button></td></tr>
+  </table>
+  <p id="result"></p>
+    <p id="decimals">
+    <b><h2>Decimals</h2></b>
+    Types of decimals are discussed in video given below
+    <div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/yyulb8Je7B4" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://www.youtube.com/watch?v=yyulb8Je7B4">Watch on Youtube</a> </div>
+    <br>Decimal types with examples
+    <div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/FdayjpFf5Zo" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://www.youtube.com/watch?v=FdayjpFf5Zo&t=126s">Watch on Youtube</a> </div>
+
+<br>Decimal conversion of rational numbers
+<div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/unwbJmTAW3o" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://www.youtube.com/watch?v=unwbJmTAW3o&t=154s">Watch on Youtube</a> </div>
+<br>Decimal conversion of irrational numbers
+<div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/fVBEpDvmRoM" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://www.youtube.com/watch?v=fVBEpDvmRoM">Watch on Youtube</a> </div>
     </p>
- <b><h2 id="euclidlemma">Euclid's Lemma</h2></b>
-    For any two positive integers "a" and "b", there exists two unique integers q and r such that a=bq+r. Where 0&#8804 r &#60 b
-<b><h2 id="euclidalgorithm">Euclid's Algorithm</h2></b>An algorithm is a step by step statement to solve any problem. Eclid's algorith is used
- to find HCF(Highest Common factor) or gcd(greatest common divisor)of two numbers. It is based on Euclid's Lemma.
-<br><b>Question:</b> Find the HCF of 135 and 225 using Euclid's Algorith. Watch video for solution.<br>
-<div align="center"><iframe width="360" height="240"
-src="https://www.youtube.com/embed/S_USn4d8wrs" align="middle" frameborder="0" allowfullscreen>
-</iframe></div>
-<b><h2 id="hcf_ecalculator">HCF Calculator</h2></b>
-<ul><li>For two numbers a and b(in ascending order), enter a as smaller number and b as larger number.</li>
-<li>For three numbers a,b,c(in ascending order),first calculate the hcf of a and b. Then take hcf as smaller number and c 
-as larger number and enter in the first and second text box.</li></ul><br>
-<input type="text"  placeholder="Enter smaller number" id="num1">
-<input type="text"  placeholder="Enter larger number" id="num2"><input type="button"  value="Calculate HCF" id="btn">
-<p id="result"></p>
-<p id="abform">
-<br><b><u><h2>Express HCF of a and b in the form of am+bn</h2></u></b>
-<div align="center"><iframe width="360" height="240"
-src="https://www.youtube.com/embed/GMpNhvdqqkE" align="middle" frameborder="0" allowfullscreen>
-</iframe></div>
-</p>
+ </div>
   </body>
 </html>
