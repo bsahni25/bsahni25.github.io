@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    // Get value on button click and show alert
+    $("#calc").click(function(){
+        var a = $("#num1").val();
+         var b = $("#den1").val();
+          var c = $("#num2").val();
+           var d = $("#den2").val();
+            var i = $("#numbers").val();
+      p=parseInt(a); q=parseInt(b); r=parseInt(c); s=parseInt(d); j=parseInt(i); 
+      var num=q*r-p*s; var den=q*s*(j+1);
+      $("#result").append("</br>x="+a+"/"+b);
+      $("#result").append("<br>y="+c+"/"+d);
+      $("#result").append("<br>Number of rational numbers to be inserted="+i);
+      $("#result").append("<br>d=(y - x)/(n + 1)="+num+"/"+den);
+      for(k=1;k<=j;k++){
+        var nm=den*p+k*q*num; var dm=q*den;
+        $("#result").append("<br>A<sub>"+k+"</sub>=("+p+"/"+q+")+"+k+"x("+num+"/"+den+")="+nm+"/"+dm);
+      }
+    });
+});
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    input[type="text"] {
+
+  background-color : #d1d1d1; 
+
+}
+
+  div{
+    font-size:16px;
+  }
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+
+.x {
+width: auto;
+height: auto;
+background-color: #fa0;
+transition: 1000ms linear;
+}
+.x:hover {
+background-color: #0af;
+}
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+</head>
+<body  style="background-color:powderblue;">
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active" >Home</a>
+  <a href="mathshome.html" target="_self">Mathematics</a>
+  <a href="physics.html" target="_self">Physics</a>
+  <a href="about.html" target="_self">About</a>
+  </div>
+
+<br>
+<h2 align="center">Motion</h2><hr width="100%">
+<div id="textbd" >
+<b><h3>Topics</h3></b>
+<ul>
+<li><a href="#prerequisite">Prerequisite Knowledge</a></li>
+<li><a href="#motion">Motion</a></li>
+ </ul>
+ <hr width="100%">
+ <h2 align="center">Prerequisite Knowledge</h2>
+ <u><h3>1) Scalars and vectors</h3></u>
+ On the basis of direction dependance physical quantities are divided into two categories  1)Scalar Quantities  2) Vector Quantities
+<u><h3>Scalar Quantities:</h3></u>Those physical quantities which representation does not require any knowledge of direction, are called 
+scalar quantities. Such quantities require only magnitude(numerical values). Scalar quantities obey simple algebra for mathematical 
+operations. Example: Time, mass, distance, speed, volume etc.
+ <u><h3>Vector Quantities:</h3></u>Those physical quantities which representation requires magnitude and direction both, are called vector quantities.
+ Such quantities must provide a knowledge of magnitude and the direction in which it is effective. Vector quantities do not obey simple algeraic rules.
+ Vector algebra is used for their mathematical calculations. Vector quantities are expressed symbolically by putting an arrow over 
+the alphabete and graphically by arrows. Illustration is given in the video. Example: Displacement, Velocity, acceleration, force etc.
+
+<div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/3k6IZdG-Zj8" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://youtu.be/3k6IZdG-Zj8">Watch on Youtube</a> </div>
+ <u><h3>2) System of measurement:</h3></u>To measure a quantity we first choose a standard of same kind and then compare the quantity with the chosen standard. Hence measurement 
+ is just a comparision of a quantity with the chosen standard of same kind. The chosen standard is called unit. Example: If we want to measure distance between two points then 
+ first of all we have to take anything as a standard which has length. If the distance is n times between the two points then Q=nu. 
+ Where Q is the quantity, n is the numerical value and u is the unit.<br>
+ There are following types of systems of measurement: MKS, CGS, FPS and SI.
+ Quantities and their units in the systems are given in the table below.
+ <table border="1" align="center" width="60%">
+ <tr><th></th><th>Length</th><th>Mass</th><th>Time</th></tr>
+ <tr><th>MKS</th><th>Metre(m)</th><th>Kilogram(kg)</th><th>Second(s)</th></tr>
+ <tr><th>CGS</th><th>Centimetre(cm)</th><th>Gram(gm)</th><th>Second(s)</th></tr>
+ <tr><th>FPS</th><th>Foot</th><th>Pound</th><th>Second</th></tr>
+ </table>
+ <br>The international system of units(SI) is the modern form of the metric system. It has seven fundamental units and rest are derived from these seven units.
+ <table border="1" align="center" width="60%">
+ <tr><th>Quantity</th><th>SI Units</th><th> Symbol of unit</th></tr></tr>
+ <tr><th>Length</th><th>metre</th><th> m</th></tr></tr>
+ <tr><th>mass</th><th>kilogram</th><th>kg</th></tr></tr>
+ <tr><th>Time</th><th>second</th><th> s</th></tr></tr>
+ <tr><th>Electric Current</th><th>ampere</th><th>A</th></tr></tr>
+ <tr><th>Temperature</th><th>kelvin</th><th>K</th></tr></tr>
+ <tr><th>Amount of substance</th><th>mole</th><th>mol</th></tr></tr>
+ <tr><th>Luminous Intensity</th><th>candela</th><th> cd</th></tr></tr>
+ </table>
+ <div align="center">
+ <iframe width="360" height="240"
+src="https://www.youtube.com/embed/gddmZUwJP3g" align="middle" frameborder="0" allowfullscreen>
+</iframe>
+    <br><a href="https://youtu.be/gddmZUwJP3g">Watch on Youtube</a> </div>
+	
+	
+  </body>
+</html>
